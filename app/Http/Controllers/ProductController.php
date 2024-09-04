@@ -32,13 +32,13 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'nome_produto' => 'required',
-            'marca' => 'required',
-            'categoria' => 'required',
-            'valor_comprar' => 'required',
-            'valor_venda' => 'required',
-            'qtd_estoque' => 'required'
+        $request -> validate([
+            'nome_produto'      => 'required',
+            'marca'             => 'required',
+            'categoria'         => 'required',
+            'valor_comprar'     => 'required',
+            'valor_venda'       => 'required',
+            'qtd_estoque'       => 'required'
         ]);
 
         Product::create($request->all());

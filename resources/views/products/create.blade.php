@@ -3,6 +3,9 @@
 @section('title', 'Create Page')
 
 @section('content')
+<a href="{{ url('/') }}">
+    <button class='p-2 bg-zinc-600 text-zinc-100 rounded-lg hover:bg-zinc-100 hover:text-zinc-700 transition-all'>Voltar</button>
+</a>
 <h1>Adicionar Produto</h1>
 <form action="{{ route('products.store') }}" method="POST">
     @csrf
@@ -22,9 +25,9 @@
         Valor Comprar:
         <input type="number" name="valor_comprar" id="valor_comprar" required step="0.1">
     </label>
-    <label for="nome_produto">
+    <label for="valor_venda">
         Valor Venda:
-        <input type="number" name="nome_produto" id="nome_produto" required step="0.1">
+        <input type="number" name="valor_venda" id="valor_venda" required step="0.1">
     </label>
     <label for="qtd_estoque">
         QTD Estoque:

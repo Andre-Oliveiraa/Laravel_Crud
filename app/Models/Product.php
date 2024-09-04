@@ -9,8 +9,12 @@ class Product extends Model
 {
     use HasFactory;
 
-    
-    protected $fillabel = [
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
         'nome_produto',
         'marca',
         'categoria',
@@ -18,5 +22,4 @@ class Product extends Model
         'valor_venda',
         'qtd_estoque',
     ];
-    
 }
