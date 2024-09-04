@@ -32,18 +32,18 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $request -> validate([
-            'nome_produto'      => 'required',
-            'marca'             => 'required',
-            'categoria'         => 'required',
-            'valor_comprar'     => 'required',
-            'valor_venda'       => 'required',
-            'qtd_estoque'       => 'required'
+        $request->validate([
+            'nome_produto' => 'required',
+            'marca' => 'required',
+            'categoria' => 'required',
+            'valor_comprar' => 'required',
+            'valor_venda' => 'required',
+            'qtd_estoque' => 'required'
         ]);
 
         Product::create($request->all());
-
-        return redirect()->route('products.index')->with('success', 'Produto Cadastrado');
+        
+        return redirect()->route('products.index')->with('success', 'Produto Cadastrado');;
     }
 
     /**
@@ -70,13 +70,13 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         //
-        $request -> validate([
-            'nome_produto'      => 'required',
-            'marca'             => 'required',
-            'categoria'         => 'required',
-            'valor_comprar'     => 'required',
-            'valor_venda'       => 'required',
-            'qtd_estoque'       => 'required'
+        $request->validate([
+            'nome_produto' => 'required',
+            'marca' => 'required',
+            'categoria' => 'required',
+            'valor_comprar' => 'required',
+            'valor_venda' => 'required',
+            'qtd_estoque' => 'required'
         ]);
 
         Product::update($request->all());
@@ -90,7 +90,7 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
-        $product -> delete();
+        $product->delete();
 
         return redirect()->route('products.index')->with('success', 'Produto Excluido');
 
