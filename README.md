@@ -1,5 +1,6 @@
 # Comando Preciso para o Inicialização do Projeto
 ```cmd
+npm i
 composer update
 ```
 

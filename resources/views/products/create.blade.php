@@ -3,7 +3,7 @@
 @section('title', 'Create Page')
 
 @section('content')
-<a href="{{ url('/') }}">
+<a href="{{ route('home.index') }}">
     <button class='p-2 bg-zinc-600 text-zinc-100 rounded-lg hover:bg-zinc-100 hover:text-zinc-700 transition-all'>Voltar</button>
 </a>
 <h1>Adicionar Produto</h1>

@@ -3,7 +3,7 @@
 @section('title', 'Index Page')
 
 @section('content')
-    <a href="{{ url('/') }}">
+    <a href="{{ route('products.index') }}">
         <button>Voltar</button>
     </a>
     <h1>Detalhes do Produto</h1>
@@ -16,5 +16,4 @@
         <li>Valor Venda: {{ $product->valor_venda }}</li>
         <li>QTD. Estoque: {{ $product->qtd_estoque }}</li>
     </ul>
-    <a href="{{ route('products.index') }}">voltar</a>
 @endsection
